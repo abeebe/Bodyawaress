@@ -1,0 +1,335 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home" description="Body Awareness Healing Arts Center — Therapeutic massage and Magnesphere treatment in Caro, Michigan.">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="hero-eyebrow">Welcome to</p>
+      <h1>Body Awareness<br>Healing Arts Center</h1>
+      <p class="hero-desc">
+        A group of licensed massage therapists serving the Thumb area with over 20 years
+        of combined experience. We customize every session to your unique needs.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:9896730442" class="btn btn-primary">Schedule an Appointment</a>
+        <a href="/about" class="btn btn-outline btn-outline-light">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Customized treatments tailored to your individual needs</p>
+      <div class="services-grid">
+        <div class="card service-card">
+          <div class="service-icon">&#9883;</div>
+          <h3>Swedish Massage</h3>
+          <p>Broad, flowing strokes to promote relaxation, ease muscle tension, and improve circulation throughout your body.</p>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">&#10070;</div>
+          <h3>Deep Tissue</h3>
+          <p>Targeted pressure to reach deeper layers of muscle and connective tissue, relieving chronic pain and tension.</p>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">&#10023;</div>
+          <h3>Trigger Point Therapy</h3>
+          <p>Focused treatment on specific tight areas within muscle tissue that cause pain in other parts of the body.</p>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">&#10048;</div>
+          <h3>Myofascial Release</h3>
+          <p>Gentle, sustained pressure on the myofascial connective tissue to eliminate pain and restore motion.</p>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">&#9672;</div>
+          <h3>Lymphatic Therapy</h3>
+          <p>Specialized technique to encourage the natural drainage of lymph, supporting your immune system.</p>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">&#10038;</div>
+          <h3>Magnesphere</h3>
+          <p>Innovative whole-body magnetic resonance therapy designed to promote relaxation and stress relief.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2>Now Taking New Clients for Magnesphere!</h2>
+      <p>Experience the benefits of whole-body magnetic resonance therapy.</p>
+      <a href="/contact" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Benefits Preview -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Why Massage?</h2>
+      <p class="section-subtitle">Up to 90% of disease is stress-related. Massage is an effective tool for managing that stress.</p>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <span class="benefit-check">&#10003;</span>
+          <span>Decreased anxiety & stress</span>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">&#10003;</span>
+          <span>Enhanced sleep quality</span>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">&#10003;</span>
+          <span>Greater energy & focus</span>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">&#10003;</span>
+          <span>Increased circulation</span>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">&#10003;</span>
+          <span>Reduced fatigue</span>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">&#10003;</span>
+          <span>Improved concentration</span>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">&#10003;</span>
+          <span>Natural pain relief</span>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check">&#10003;</span>
+          <span>Immune system support</span>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="/benefits" class="btn btn-outline">See All Benefits</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Preview -->
+  <section class="section section-alt">
+    <div class="container contact-preview">
+      <div class="contact-info-block">
+        <h2>Ready to Feel Better?</h2>
+        <p>Give us a call to schedule your first appointment. We'd love to help you on your path to wellness.</p>
+        <a href="tel:9896730442" class="phone-number">(989) 673-0442</a>
+        <p class="contact-address">1594 Pleasant View Drive, Caro, MI 48723</p>
+        <p class="contact-hours">Mon–Fri: 9:00 AM – 5:00 PM | By Appointment</p>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 7rem 0 5rem;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    color: var(--color-white);
+    font-size: 3.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-desc {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.9;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline-light {
+    color: var(--color-white);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .btn-outline-light:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary-dark);
+    border-color: var(--color-white);
+  }
+
+  /* Section titles */
+  .section-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    font-size: 1.05rem;
+  }
+
+  /* Services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    text-align: center;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .service-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: var(--color-accent);
+    padding: 3.5rem 0;
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .cta-content .btn-primary {
+    background: var(--color-primary-dark);
+  }
+
+  .cta-content .btn-primary:hover {
+    background: var(--color-primary);
+  }
+
+  /* Benefits */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .benefit-check {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  /* Contact Preview */
+  .contact-preview {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contact-info-block h2 {
+    margin-bottom: 1rem;
+  }
+
+  .contact-info-block > p:first-of-type {
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  .phone-number {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .phone-number:hover {
+    color: var(--color-primary-dark);
+  }
+
+  .contact-address,
+  .contact-hours {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+  }
+
+  .contact-hours {
+    margin-top: 0.25rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 5rem 0 3.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.25rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

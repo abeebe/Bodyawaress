@@ -1,0 +1,116 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">&#10047; Body Awareness</span>
+        <p>Healing Arts Center</p>
+        <p class="footer-tagline">Therapeutic massage serving the Thumb area for over 20 years.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/benefits">Benefits of Massage</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/hours">Hours & Scheduling</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>1594 Pleasant View Drive<br>Caro, MI 48723</p>
+        <p><a href="tel:9896730442">(989) 673-0442</a></p>
+        <p>Mon–Fri: 9:00 AM – 5:00 PM</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {year} Body Awareness Healing Arts Center. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-primary-dark);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 4rem 0 1.5rem;
+    margin-top: auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--color-white);
+    font-weight: 700;
+  }
+
+  .footer-brand p {
+    margin-top: 0.25rem;
+  }
+
+  .footer-tagline {
+    margin-top: 0.75rem !important;
+    max-width: 300px;
+    font-size: 0.925rem;
+  }
+
+  .footer-links h4,
+  .footer-contact h4 {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links ul {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color var(--transition);
+  }
+
+  .footer-links a:hover {
+    color: var(--color-accent-light);
+  }
+
+  .footer-contact p {
+    margin-bottom: 0.5rem;
+    font-size: 0.925rem;
+  }
+
+  .footer-contact a {
+    color: var(--color-accent-light);
+  }
+
+  .footer-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

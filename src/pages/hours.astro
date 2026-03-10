@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Hours & Scheduling" description="Operating hours and appointment policies at Body Awareness Healing Arts Center.">
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Hours & Scheduling</h1>
+      <p>Plan your visit with us</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container hours-layout">
+
+      <div class="card hours-card">
+        <h2>Hours of Operation</h2>
+        <div class="hours-table">
+          <div class="hours-row">
+            <span class="day">Monday</span>
+            <span class="time">9:00 AM – 5:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Tuesday</span>
+            <span class="time">9:00 AM – 5:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Wednesday</span>
+            <span class="time">9:00 AM – 5:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Thursday</span>
+            <span class="time">9:00 AM – 5:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Friday</span>
+            <span class="time">9:00 AM – 5:00 PM</span>
+          </div>
+          <div class="hours-row weekend">
+            <span class="day">Saturday</span>
+            <span class="time">Closed</span>
+          </div>
+          <div class="hours-row weekend">
+            <span class="day">Sunday</span>
+            <span class="time">Closed</span>
+          </div>
+        </div>
+        <p class="hours-note">All services are by appointment only.</p>
+        <a href="tel:9896730442" class="btn btn-primary" style="margin-top: 1.5rem;">Call to Schedule</a>
+      </div>
+
+      <div class="policies">
+        <h2>Appointment Policies</h2>
+
+        <div class="card policy-card">
+          <h3>Cancellations</h3>
+          <p>
+            A minimum of 24 hours advance notice is required for all cancellations.
+            Clients who do not provide adequate notice will be charged the full appointment fee.
+          </p>
+        </div>
+
+        <div class="card policy-card">
+          <h3>No-Shows</h3>
+          <p>
+            Clients who miss appointments without canceling will be charged for the
+            full cost of the missed session.
+          </p>
+        </div>
+
+        <div class="card policy-card">
+          <h3>Late Arrivals</h3>
+          <p>
+            Sessions may be shortened to accommodate subsequent appointments. Your therapist
+            will assess whether sufficient time remains to begin treatment. Regardless of
+            actual session length, the full appointment cost applies.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hours-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .hours-card {
+    text-align: center;
+    padding: 2.5rem;
+  }
+
+  .hours-card h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .hours-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.65rem 1rem;
+    border-radius: 4px;
+  }
+
+  .hours-row:nth-child(odd) {
+    background: rgba(91, 126, 95, 0.05);
+  }
+
+  .day {
+    font-weight: 600;
+  }
+
+  .time {
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  .weekend .time {
+    color: var(--color-text-light);
+  }
+
+  .hours-note {
+    margin-top: 1.25rem;
+    color: var(--color-text-light);
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+
+  .policies h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .policy-card {
+    margin-bottom: 1rem;
+  }
+
+  .policy-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+  }
+
+  .policy-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .hours-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

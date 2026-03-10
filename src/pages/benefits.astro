@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const benefits = [
+  'Decreased anxiety and stress',
+  'Enhanced sleep quality',
+  'Greater energy levels',
+  'Improved concentration and focus',
+  'Increased circulation',
+  'Reduced fatigue',
+  'Lower back pain relief and improved mobility',
+  'Assistance for expectant mothers with labor and recovery',
+  'Support for reducing medication dependence',
+  'Immune system enhancement through lymphatic stimulation',
+  'Muscle strengthening and stretching',
+  'Athletic performance preparation and recovery',
+  'Skin condition improvement',
+  'Joint flexibility increases',
+  'Depression and anxiety reduction',
+  'Scar tissue and stretch mark minimization',
+  'Tissue oxygenation and nutrient delivery',
+  'Post-surgery swelling and adhesion reduction',
+  'Muscle spasm and cramping relief',
+  'Muscle relaxation for injuries and overuse',
+  'Endorphin release for natural pain management',
+  'Migraine pain relief',
+];
+---
+
+<BaseLayout title="Benefits of Massage" description="Discover the many health benefits of therapeutic massage at Body Awareness Healing Arts Center.">
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Benefits of Massage</h1>
+      <p>Discover what therapeutic massage can do for you</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="benefits-intro">
+        <p>
+          Up to 90% of disease is stress-related. Nothing ages us faster, inside or out,
+          than high stress. Massage is an effective tool for managing this stress, which
+          translates into a wide range of health benefits.
+        </p>
+      </div>
+
+      <div class="benefits-list">
+        {benefits.map((benefit) => (
+          <div class="benefit-row">
+            <span class="benefit-icon">&#10003;</span>
+            <span>{benefit}</span>
+          </div>
+        ))}
+      </div>
+
+      <div class="benefits-cta">
+        <p>Experience these benefits for yourself.</p>
+        <a href="tel:9896730442" class="btn btn-primary">Book Your Session</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .benefits-intro {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+  }
+
+  .benefits-list {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .benefit-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    font-size: 1.025rem;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+
+  .benefit-row:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow);
+  }
+
+  .benefit-icon {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .benefits-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .benefits-cta p {
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.25rem;
+  }
+</style>

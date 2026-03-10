@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    question: 'Where will my massage or bodywork session take place?',
+    answer: 'Your session will take place in a warm, comfortable, quiet room. You will lie on a specially designed massage table with soft music playing to help you relax.',
+  },
+  {
+    question: 'Must I be completely undressed?',
+    answer: 'Most massage techniques are traditionally performed with the client unclothed; however, it is entirely up to you what you want to wear. You will be properly draped during the entire session.',
+  },
+  {
+    question: 'Will the practitioner be present when I disrobe?',
+    answer: 'No. The practitioner will leave the room while you undress, relax onto the table, and cover yourself with a clean sheet or towel.',
+  },
+  {
+    question: 'Will I be covered during the session?',
+    answer: 'You will be properly draped at all times to keep you warm and comfortable. Only the area being worked on will be exposed.',
+  },
+  {
+    question: 'What parts of my body will be massaged?',
+    answer: 'A typical full-body session includes work on your back, arms, legs, feet, hands, head, neck, and shoulders. You and your therapist will discuss areas to focus on or avoid.',
+  },
+  {
+    question: 'What will the massage or bodywork feel like?',
+    answer: 'A relaxing Swedish massage typically begins with broad, flowing strokes that help calm your nervous system. As your body relaxes, pressure may gradually be increased. A light oil or lotion is used to reduce friction and nourish the skin.',
+  },
+  {
+    question: 'Are there different kinds of massage and bodywork?',
+    answer: 'Yes, there are numerous types of massage and bodywork. We offer Swedish, deep tissue, trigger point, myofascial release, lymphatic therapy, and more. Each uses different strokes and techniques to address specific needs.',
+  },
+  {
+    question: 'What should I do during the massage or bodywork session?',
+    answer: 'Make yourself comfortable. The practitioner will either gently move you or tell you what is needed throughout the session. Many people close their eyes and relax completely. Don\'t hesitate to communicate if you need the pressure adjusted.',
+  },
+  {
+    question: 'How will I feel after the session?',
+    answer: 'Most people feel very relaxed. Some experience freedom from long-term aches and pains. Many enjoy increased energy, heightened awareness, and greater productivity which can last for days.',
+  },
+  {
+    question: 'What are the benefits of massage and bodywork?',
+    answer: 'Massage can help release tension, reduce stress, relieve pain, improve circulation, encourage faster healing, improve sleep quality, increase concentration, and provide an overall sense of well-being.',
+  },
+  {
+    question: 'Are there conditions that make massage inadvisable?',
+    answer: 'Yes. Please inform your therapist of any health problems or medications you are taking. If you are under a doctor\'s care, it is strongly advised that you receive a written recommendation for massage therapy.',
+  },
+];
+---
+
+<BaseLayout title="FAQ" description="Frequently asked questions about massage therapy at Body Awareness Healing Arts Center.">
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <p>Everything you need to know before your visit</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="faq-list">
+        {faqs.map((faq, i) => (
+          <details class="faq-item" open={i === 0}>
+            <summary class="faq-question">
+              <span>{faq.question}</span>
+              <span class="faq-toggle">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+
+      <div class="faq-cta">
+        <p>Have more questions? We're happy to help.</p>
+        <a href="tel:9896730442" class="btn btn-primary">Call Us</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .faq-list {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--color-primary-dark);
+    list-style: none;
+    user-select: none;
+    transition: background-color var(--transition);
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question:hover {
+    background-color: rgba(91, 126, 95, 0.04);
+  }
+
+  .faq-toggle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-primary);
+    transition: transform var(--transition);
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+
+  details[open] .faq-toggle {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.25rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+  }
+
+  .faq-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .faq-cta p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+  }
+</style>
