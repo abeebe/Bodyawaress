@@ -18,11 +18,27 @@ const { title, description = 'Therapeutic massage and healing arts in Caro, Mich
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--
+      Inter and Playfair Display are self-hosted from /fonts/ — see
+      public/fonts/README.md. This site has no privacy policy; it can only
+      defensibly have none if it makes no third-party request, and a Google
+      Fonts <link> is one. Do not reintroduce fonts.googleapis.com /
+      fonts.gstatic.com here. The @font-face rules live in styles/global.css
+      next to the --font-body / --font-heading tokens that name them.
+    -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="/fonts/inter-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/playfair-display-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
     <title>{title} | Body Awareness Healing Arts Center</title>
 

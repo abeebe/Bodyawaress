@@ -1,3 +1,41 @@
+/*
+  Self-hosted webfaces. Both are variable fonts, so one file per family covers
+  every weight the site uses (Inter 400-700, Playfair Display 500-700) — Google
+  served a single variable file for each too, so this is the same download from
+  our own origin rather than an extra one. See public/fonts/README.md for
+  provenance and the subset command.
+
+  font-display: swap reproduces the ?display=swap the old <link> carried: text
+  paints immediately in the fallback and reflows, never a blank FOIT.
+
+  unicode-range documents what the subset actually contains. The decorative
+  glyphs this site uses (★ ✓ ❖ ⏰ ...) sit outside it and fall back to a system
+  font — which is exactly what they did with the Google-hosted latin subset too.
+*/
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/inter-variable.woff2') format('woff2');
+  unicode-range: U+0020-007E, U+00A0, U+00A9, U+00AE, U+00B0, U+00B7,
+    U+00C0-00FF, U+00D7, U+0131, U+0152-0153, U+2013-2014, U+2018-2019,
+    U+201C-201D, U+2022, U+2026, U+2039-203A, U+2044, U+2122, U+2190, U+2192,
+    U+2212, U+20AC;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/fonts/playfair-display-variable.woff2') format('woff2');
+  unicode-range: U+0020-007E, U+00A0, U+00A9, U+00AE, U+00B0, U+00B7,
+    U+00C0-00FF, U+00D7, U+0131, U+0152-0153, U+2013-2014, U+2018-2019,
+    U+201C-201D, U+2022, U+2026, U+2039-203A, U+2044, U+2122, U+2190, U+2192,
+    U+2212, U+20AC;
+}
+
 /* Reset & Base */
 *,
 *::before,
